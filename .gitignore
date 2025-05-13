@@ -1,0 +1,30 @@
+# .gitignore – Prevents committing sensitive or unnecessary files
+
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+
+# Virtual env
+venv/
+.env
+
+# Credentials
+config/vertexai-credentials.json
+config/secrets.json
+
+# Streamlit and FastAPI logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Docker
+*.pid
+*.sock
+
+# Jupyter/Notebook cache
+.ipynb_checkpoints/
+
+# VSCode
+.vscode/

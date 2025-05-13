@@ -1,0 +1,15 @@
+# docker/docker-compose.yml – Local Orchestration for Fullstack Travel Agent
+
+version: '3.9'
+
+services:
+  travel-agent:
+    build: .
+    container_name: travel_agent_app
+    ports:
+      - "8000:8000"   # FastAPI
+      - "8501:8501"   # Streamlit
+    environment:
+      - GOOGLE_APPLICATION_CREDENTIALS=config/vertexai-credentials.json
+    volumes:
+      - .:/app
